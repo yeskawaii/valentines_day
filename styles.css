@@ -2,13 +2,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #3e0038, #c004ad); /* Dark purple gradient */
+    background: radial-gradient(circle, #ff6699, #ff99cc); /* Initial radial gradient */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
     position: relative;
+    background: radial-gradient(circle at center, #ff6699, #ff99cc);
 }
 
 .message {
@@ -17,19 +18,21 @@ body {
 }
 
 .message h1 {
-    color: aliceblue;
     font-size: 36px; /* Increased font size */
     font-weight: bold; /* Bolder font weight */
     margin-bottom: 10px;
     animation: fadeIn 2s ease-in-out;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* More prominent text shadow */
 }
 
+
+
 .message .xayah {
-    color: #d4a5d4; /* Lighter purple color for Xayah */
+    color: #800080; /* Brighter purple color for Xayah */
 }
 
 .message .rakan {
-    color: #ffd699; /* Lighter orange color for Rakan */
+    color: #dd7900; /* Slightly darker orange color for Rakan */
 }
 
 .hearts {
@@ -42,12 +45,44 @@ body {
     z-index: 0;
 }
 
+.card {
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque background */
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for more depth */
+    padding: 30px; /* Increased padding for more space inside the card */
+    text-align: center;
+    width: 80%; /* Slightly narrower width */
+    max-width: 350px; /* Adjusted max-width */
+    position: relative;
+    z-index: 1;
+    -webkit-backdrop-filter: blur(10px); /* Added blur effect for a frosted glass look */
+    backdrop-filter: blur(10px); /* Added blur effect for a frosted glass look */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Added a subtle border */
+}
+
+#loveButton {
+    background-color: #ff4e4e; /* Stronger red button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#loveButton:hover {
+    background-color: #ff2525; /* Darker red hover color */
+    scale: 1.1;
+}
+
 .heart {
     position: absolute;
     bottom: -50px;
     width: 50px;
     height: 50px;
-    background-color: #ff3366;
+    background-color: #800080; /* Brighter purple color */
     transform: rotate(-45deg);
     animation: float 5s infinite;
 }
